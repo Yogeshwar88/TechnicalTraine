@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function gettersetterOOPJS()
+{
+    class Dog {
+        constructor(name) {
+            this.name = name;
+        }
+
+        get dogname() {
+            return this.name;
+        }
+
+        set dogname(newName) {
+            this.name = newName;
+        }
+
+        bark() {
+            console.log(`${this.name} says woof!!`);
+        }
+    }
+
+    // Create an object
+    let d = new Dog("Bruno");
+
+    // Use getter
+    console.log(d.dogname);
+
+    // Use setter
+    d.dogname = "Spike";
+
+    // Call method
+    d.bark();
+}
+
+gettersetterOOPJS();
+</script>
+
+</body>
+</html>

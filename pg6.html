@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+
+    <p>A date object can be created with a specified date and time :</p>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        let dt = new Date();
+        let d = new Date("Oct 13, 2014 11:13:00");
+
+        d += "<br> Date (year, month) - " + new Date(2023, 9);
+        d += "<br> Date (year, month, day) - " + new Date(2026, 3, 25);
+
+        document.getElementById("demo").innerHTML = d;
+    </script>
+
+    <br>
+
+    <script>
+        const d2 = new Date("2021-03-25");
+        document.getElementById("demo2").innerHTML = d2.getFullYear();
+
+        document.write("Month: " + d2.getMonth());
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Function Demo</title>
+</head>
+<body>
+
+<h2>JavaScript Function Example</h2>
+
+<button type="button" onclick="ShowMessages('Steve')">Click to Say Hello</button>
+<button type="button" onclick="ShowMessages('John')">Click to Say Hello Again</button>
+
+<script>
+    function ShowMessages(firstName) {
+
+        function SayHello() {
+            alert("Hello " + firstName);
+        }
+
+        return SayHello();
+    }
+
+
+    ShowMessages("Steve");
+</script>
+</body>
+</html>

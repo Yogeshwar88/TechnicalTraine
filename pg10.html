@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Error Handling Demo</title>
+</head>
+<body>
+<h2>JavaScript Error Handling Demo</h2>
+<p>Call a function which performs a calculation</p>
+ 
+    <button type="button" onclick="CheckError()">Result</button>
+    <button type="button" onclick="throwError()">Throw Custom Error</button>
+<p id="demo"></p>
+    <p id="errorMessage"></p>
+    <p id="message"></p>
+    <script>
+        function Sum(a, b) {
+            return a + b;
+        }
+
+        function CheckError(){
+            let result;
+            try{
+                // Demo error sometimes
+                if (Math.random() > 0.5) {
+                    result = Sum(10, 30);
+                    document.getElementById("demo").innerHTML = "Result: " + result;
+                } else {
+                    nope; // Intentional error
+                }
+            }
+            catch(ex){
+                document.getElementById("errorMessage").innerHTML = "Error: " + ex.message;
+                console.log("Error caught:", ex.message);
+            }
+            finally{
+                document.getElementById("message").innerHTML += "<br>Finally block executed.";
+            }
+        }
+        function throwError(){
+            try{
+                throw "Manual error occurred";
+            }
+            catch(ex){
+                document.getElementById("errorMessage").innerHTML = "Custom Error: " + ex;
+                document.getElementById("message").innerHTML += "<br>Finally from throwError.";
+            }
+            finally {
+                console.log("throwError finally");
+            }
+        }
+    </script>
+ 
+    </body>
+</html>
+ 

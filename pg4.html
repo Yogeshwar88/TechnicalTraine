@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function toCelsius(fahrenheit) {return (5/9)*(fahrenheit-32);}
+            document.getElementById("degree").innerHTML = toCelsius(210);
+        </script>
+    </head>
+    <body>
+        <h1> JavaScript Functions </h1>
+        <p> call a function which performes a calculation and returns result:</p>
+        <br>
+        <p id="demo"></p>
+        <br>
+        <p id = "degree">Degrees</p>
+        <script>
+            function myFunction(p1,p2){
+                return p1*p2;
+            }
+            document.getElementById("demo").innerHTML = myFunction(4, 5);
+        </script>
+    </body>
+</html>
