@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Counter App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .counter-container {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        #counter {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        button:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+        #decrement {
+            background: #f44336;
+        }
+        #decrement:hover {
+            background: #da190b;
+        }
+        #reset {
+            background: #ff9800;
+        }
+        #reset:hover {
+            background: #e68900;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <h1>Interactive Counter</h1>
+        <div id="counter">0</div>
+        <button id="decrement">-</button>
+        <button id="increment">+</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <script>
+        let count = 0;
+        const counterElement = document.getElementById('counter');
+        const decrementBtn = document.getElementById('decrement');
+        const incrementBtn = document.getElementById('increment');
+        const resetBtn = document.getElementById('reset');
+
+        decrementBtn.addEventListener('click', () => {
+            count--;
+            counterElement.textContent = count;
+        });
+
+        incrementBtn.addEventListener('click', () => {
+            count++;
+            counterElement.textContent = count;
+        });
+
+        resetBtn.addEventListener('click', () => {
+            count = 0;
+            counterElement.textContent = count;
+        });
+    </script>
+</body>
+</html>
